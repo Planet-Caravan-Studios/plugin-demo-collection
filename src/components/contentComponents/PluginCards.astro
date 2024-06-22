@@ -1,0 +1,101 @@
+---
+interface Props {
+	title: string;
+	body: string;
+	href: string;
+}
+
+const { href, title, body } = Astro.props;
+---
+
+<div class="flexContainer">
+		
+		<div class="pluginCard">
+			<h2>Advanced UTM Tracking</h2>
+			<p class="tagline">Make UTM tracking work the way everyone expects it to.<p>
+			<p>
+				<strong>Description</strong>: 
+				Save UTM values to the user's browsing session and use them for analytics events and auto-filled form values. 
+				<br/><br/>
+				UTM values can traditionally only be tracked on the page the user lands on and not beyond that - this plugin automatically saves UTM values to your users' browser, keeping the UTMs available to use across all pages and even from previous visits.
+			</p>
+			
+			<ul class="linkGroup">
+				<li>Github Link: <a href="#">[coming_soon]</a></li>
+				<li>NPM Link: <a href="#">[coming_soon]</a></li>
+				<li>CDN Link: <a href="#">[coming_soon]</a></li>
+			</ul>
+		</div>
+
+		<div class="pluginCard">
+			<h2>Custom Analytics Events</h2>
+			<p class="tagline">Track user behavior from simple clicks and form submits to complex actions.<p>
+
+			<p>
+				<strong>Description</strong>: Creates custom analytics events based on simple inline HTML attributes, or more complex programmatic methods.
+				<br/><hr/><br/>
+				<strong>The Problem</strong>: UTM values can traditionally only be tracked on the page the user lands on and not beyond that.
+				<br/><br/>
+				<strong>The Solution</strong>: plugin lets you tag individual elements with inline HTML, or do event tagging in bulk
+			</p>
+
+			<ul class="linkGroup">
+				<li>Github Link: <a href="#">[coming_soon]</a></li>
+				<li>NPM Link: <a href="#">[coming_soon]</a></li>
+				<li>CDN Link: <a href="#">[coming_soon]</a></li>
+			</ul>
+		</div>
+
+		<div class="pluginCard">
+			<h2>Dynamic Content Control</h2>
+			<p class="tagline">Tailor your content for specfic campaigns and individual users.<p>
+
+			<p>
+				<strong>Description</strong>: Change text, images, and other site content based on user behavior or how the user came to the site.
+				<br/><hr/><br/>
+				<strong>The Problem</strong>: UTM values can traditionally only be tracked on the page the user lands on and not beyond that.
+				<br/><br/>
+				<strong>The Solution</strong>: this plugin automatically saves UTM values to your users' browsers - keeping the UTMs available to use across all pages and even from previous visits.
+			</p>
+			
+			<ul class="linkGroup">
+				<li>Github Link: <a href="#">[coming_soon]</a></li>
+				<li>NPM Link: <a href="#">[coming_soon]</a></li>
+				<li>CDN Link: <a href="#">[coming_soon]</a></li>
+			</ul>
+		</div>
+
+	</div>
+
+
+
+<style lang="scss">
+	.flexContainer{
+		display: flex;
+		justify-content: center;
+		align-items: flex-start;
+		flex-direction: row;
+		margin: -1rem;
+	}
+	.pluginCard{
+		width: 100%;
+		max-width:400px;
+		border: var(--border-settings-main);
+		box-shadow: var(--shadow-1);
+		padding: 1rem;
+		margin: 1rem;
+		h2{
+			margin: 0;
+			padding-bottom: 0.5rem;
+			border-bottom: var(--border-settings-main);
+		}
+		.tagline{
+			margin-top: 0.5rem;
+			font-weight: 800;
+		}
+		.linkGroup{
+			border-top: var(--border-settings-main);
+			padding-top: 1rem;
+		}
+	}
+</style>

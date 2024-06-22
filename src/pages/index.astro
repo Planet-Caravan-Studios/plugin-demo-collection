@@ -1,14 +1,19 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import InnerLayout from '../components/InnerLayout.astro';
+import Layout from '@layouts/Layout.astro';
+import InnerLayout from '@components/InnerLayout.astro';
+import PluginCards from '@components/contentComponents/PluginCards.astro';
 ---
 
-<Layout title="Welcome to Astro.">
-	<main>
+<Layout 
+	title="Plugins"
+	heading="Web Marketing Plugin Suite"
+>
+	
+	<PluginCards/>
+
+	
 		
-		<InnerLayout/>
-		
-	</main>
+
 </Layout>
 
 <style>
@@ -18,5 +23,6 @@ import InnerLayout from '../components/InnerLayout.astro';
 		font-size: 14px;
 		line-height: 1.6;
 	}
+	
 
 </style>

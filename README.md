@@ -1,8 +1,24 @@
-# Simple Showcase Template | Planet Caravan Studios
+# Plugin Showcase & Documentation Site
+The Grovery /// Planet Caravan Studios
 
-Use this template to showcase components and ideas in a simple standalone manner.  It includes a sandbox area for the demo component and a text area for explaining how it works.
+This project serves as a central hub for plugins and micro-projects built by developer Alec Reimel and available through the company he is working for or through freelance
 
-This template can be found at: https://github.com/Planet-Caravan-Studios/simple-showcase-template
+## Site Structure
+- Index
+-- Plugins
+--- Advanced UTMs
+--- Custum Events
+---- Dynamic Content
+---- coming soon:
+----- ConsoleLogger+
+	- Micro-Projects
+		- QR Code Generator
+		- Tracking URL Builder
+	- Templates
+		- Landing Page Site
+		- Writer's Blog Site
+		- Simple Showcase Site
+
 
 ---
 

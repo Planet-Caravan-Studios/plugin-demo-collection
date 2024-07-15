@@ -1,28 +1,76 @@
 ---
-import Layout from '@layouts/Layout.astro';
-import InnerLayout from '@components/InnerLayout.astro';
-import PluginCards from '@components/contentComponents/PluginCards.astro';
+/*========================================*/
+/*	PAGE: Home/Index
+		NOTES:	
+*/
+/*========================================*/
+
+//Essential Components
+	import Layout from '@layouts/Layout.astro';
+
+//Content Components
+	import MasterComponent from '@components/MasterComponent.astro';
+	import PluginCards from '@components/contentComponents/PluginCards.astro';
+	import SplitLayout from '@components/contentLayouts/SplitLayout.astro';
+	import SampleForm from '@components/Forms/SampleForm.astro';
+	import DisplayBits from '@components/DisplayBits.astro';
 ---
 
 <Layout 
 	title="Plugins"
-	heading="Web Marketing Plugin Suite"
+	heading="Top-Secret Web/Code Tools"
 >
 	
-	<PluginCards/>
+	<section>
+		<h2 class="text-size-3">Web Marketing Plugin Suite</h2>
+		<p class="text-size-2">
+			
+			Upgrade your analytics with features you you wished were standard, features you've always wanted, and features you didn't even know existed.
+			<br/><br/>
+			The Grovery's website plugins are built for web developers and marketing professionals. They're free to use, and easy to set up. 
+			
+		</p>
+	</section>
+	<section class="noPadding">
+		<SplitLayout>
+			<Fragment slot="left-slot"> 
+				<h2>Contact Us</h2>
+				<p>Get in touch with us to have our tools set up on your website.</p>
+			</Fragment>
+			<Fragment slot="right-slot"> 
+				<SampleForm>
+			</Fragment>
+		</SplitLayout>
+	</section>
+	<section>
+		<PluginCards/>	
+	</section>
 
+	<section>
+		<br/><hr/><br/>
+		<p class="text-size-2">
+			<strong>Know how to code?</strong> Then feel free to use the templates and tools we've built! They're not exactly beginner-level, but the average coder should find them easy to use.  
+			<br/><br/>
+			<strong>For non-coders:</strong> freely sharing your work is a long-standing tradition of coders. Nearly everyone's work is built on top of someone else's work, with the hope that someone will eventually build on top of that work, too.  
+			<br/><br/>
+			<strong>Why share code for free?</strong> Lots of people who don't code have that question, and there's 2 main reasons:
+		</p>
+		<ul class="text-size-2">
+			<li>1. All code is built on top of other freely shared code, and it's what pushes the whole industry forward. Even Apple products are built on open source code from the 70s.</li>
+			<li>If code is being used on a website, any developer can copy it. That's just how the internet works. So why not be nice and include some instructions?</li>
+		</ul>
+	</section>
 	
-		
-
 </Layout>
 
-<style>
+<style lang="scss">
 	main {
 		margin: auto;
-		padding: 1rem;		
+		//padding: 1rem;		
 		font-size: 14px;
 		line-height: 1.6;
 	}
+	
 	
 
 </style>

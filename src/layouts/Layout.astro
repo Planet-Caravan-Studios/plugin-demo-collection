@@ -1,11 +1,16 @@
 ---
-import "@styles/main.scss"
+//Styles
+	import "@styles/main.scss"
 
-interface Props {
-	title: string;
-}
+//Props
+	interface Props {
+		title: string;
+		description: string;
+		heading: string;
+	}
+	const { title, description, heading } = Astro.props;
 
-const { title, heading } = Astro.props;
+
 ---
 
 <!doctype html>
@@ -24,10 +29,16 @@ const { title, heading } = Astro.props;
 	<body>
 		
 		<header class="headerSection">
-			<div>[INTERZONE_MARKETING]</div>
-			<div>
-				<h1>{heading}</h1>
+			<div class="logo">
+				[G]
 			</div>
+			<div class="text">
+				<div class="top">The Grovery Dev_Labs</div>
+				<div class="bottom">
+					<h1>{heading}</h1>
+				</div>
+			</div>
+			
 		</header>
 		
 		<main>
@@ -35,7 +46,7 @@ const { title, heading } = Astro.props;
 		</main>
 
 		<footer class="footerSection">
-			<div>[FOOTER SECTION]</div>
+			<div>The Grovery Dev_Labs</div>
 		</footer>
 
 	</body>
@@ -52,7 +63,7 @@ const { title, heading } = Astro.props;
 		border: var(--border-settings-main);
 		max-width: var(--container-width);
 		margin: auto;
-		padding: var(--padding-1);
+		//padding: var(--padding-1);
 
 	}
 
@@ -61,9 +72,46 @@ const { title, heading } = Astro.props;
 		border-bottom: 0;
 		max-width: var(--container-width);
 		margin: auto;
-		padding: var(--padding-1);
+		
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-start;
+		align-items: flex-start;
+
+
+		.logo{
+			width: 200px;
+			height: 100%;
+			
+			padding: 1rem;
+			font-size: 3rem;
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+		}
+		.text{
+			width: calc(100% - 200px);
+			height: 100%;
+			border-left: var(--border-settings-main);
+			
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-start;
+			align-items: flex-start;
+			.top{
+				padding: 1rem 1rem;
+				width: 100%;
+				border-bottom: var(--border-settings-main);
+			}
+			.bottom{
+				padding: 1rem 1rem;
+				width: 100%;
+			}
+		}
 		h1{
 			margin: 0;
+			font-size: 2rem;
 		}
 	}
 
